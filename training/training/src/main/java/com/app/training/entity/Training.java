@@ -10,9 +10,6 @@ import java.time.LocalDate;
 import java.util.List;
 
 @Entity
-@Data
-@AllArgsConstructor
-@NoArgsConstructor
 public class Training {
 
     @Id
@@ -58,6 +55,139 @@ public class Training {
 
     private String organizationName;
 
+    public Training() {
+    }
+
+    public Training(String name, List<String> skills, Duration duration, LocalDate startDate, LocalDate endDate, Long numberOfBatches, Long numberOfStudentsPerBatch, StudentType studentType, Double budget, String tableOfContent, String pointOfContactName, String pointOfContactEmail, String pointOfContactPhone, Status status, String organizationName) {
+        this.name = name;
+        this.skills = skills;
+        this.duration = duration;
+        this.startDate = startDate;
+        this.endDate = endDate;
+        this.numberOfBatches = numberOfBatches;
+        this.numberOfStudentsPerBatch = numberOfStudentsPerBatch;
+        this.studentType = studentType;
+        this.budget = budget;
+        this.tableOfContent = tableOfContent;
+        this.pointOfContactName = pointOfContactName;
+        this.pointOfContactEmail = pointOfContactEmail;
+        this.pointOfContactPhone = pointOfContactPhone;
+        this.status = status;
+        this.organizationName = organizationName;
+    }
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public List<String> getSkills() {
+        return skills;
+    }
+
+    public void setSkills(List<String> skills) {
+        this.skills = skills;
+    }
+
+    public Duration getDuration() {
+        return duration;
+    }
+
+    public void setDuration(Duration duration) {
+        this.duration = duration;
+    }
+
+    public Long getNumberOfBatches() {
+        return numberOfBatches;
+    }
+
+    public void setNumberOfBatches(Long numberOfBatches) {
+        this.numberOfBatches = numberOfBatches;
+    }
+
+    public Long getNumberOfStudentsPerBatch() {
+        return numberOfStudentsPerBatch;
+    }
+
+    public void setNumberOfStudentsPerBatch(Long numberOfStudentsPerBatch) {
+        this.numberOfStudentsPerBatch = numberOfStudentsPerBatch;
+    }
+
+    public StudentType getStudentType() {
+        return studentType;
+    }
+
+    public void setStudentType(StudentType studentType) {
+        this.studentType = studentType;
+    }
+
+    public Double getBudget() {
+        return budget;
+    }
+
+    public void setBudget(Double budget) {
+        this.budget = budget;
+    }
+
+    public String getTableOfContent() {
+        return tableOfContent;
+    }
+
+    public void setTableOfContent(String tableOfContent) {
+        this.tableOfContent = tableOfContent;
+    }
+
+    public String getPointOfContactName() {
+        return pointOfContactName;
+    }
+
+    public void setPointOfContactName(String pointOfContactName) {
+        this.pointOfContactName = pointOfContactName;
+    }
+
+    public String getPointOfContactEmail() {
+        return pointOfContactEmail;
+    }
+
+    public void setPointOfContactEmail(String pointOfContactEmail) {
+        this.pointOfContactEmail = pointOfContactEmail;
+    }
+
+    public String getPointOfContactPhone() {
+        return pointOfContactPhone;
+    }
+
+    public void setPointOfContactPhone(String pointOfContactPhone) {
+        this.pointOfContactPhone = pointOfContactPhone;
+    }
+
+    public Status getStatus() {
+        return status;
+    }
+
+    public void setStatus(Status status) {
+        this.status = status;
+    }
+
+    public String getOrganizationName() {
+        return organizationName;
+    }
+
+    public void setOrganizationName(String organizationName) {
+        this.organizationName = organizationName;
+    }
+
     public LocalDate getStartDate() {
         return startDate;
     }
@@ -73,6 +203,7 @@ public class Training {
     public void setEndDate(LocalDate endDate) {
         this.endDate = endDate;
     }
+
 
 
     @PrePersist
